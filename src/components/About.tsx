@@ -22,7 +22,7 @@ export default function About() {
                 las etapas del ciclo de vida del desarrollo de software.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                Actualmente trabajo en Quind como desarrollador Full Stack, donde desarrollo un 
+                Trabaje en Quind como desarrollador Full Stack, donde desarrollo un 
                 ERP interno utilizando FastAPI y React, implementando el patrón de diseño atómico 
                 para maximizar la reutilización de componentes. También trabajo con Angular e Ionic 
                 en el desarrollo de aplicaciones móviles con arquitectura de microfrontends.

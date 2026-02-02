@@ -1,18 +1,23 @@
 'use client';
 
 import { useState } from 'react';
+import { Container } from '../atoms/Container';
+import { Button } from '../atoms/Button';
+import { Typography } from '../atoms/Typography';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Container>
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-gray-900">Andrés Felipe Muñoz</h1>
+            <Typography variant="h3" className="text-2xl font-bold text-gray-900">
+              Andrés Felipe Muñoz
+            </Typography>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">Sobre mí</a>
@@ -20,7 +25,11 @@ export default function Header() {
             <a href="#skills" className="text-gray-700 hover:text-blue-600 transition-colors">Habilidades</a>
             <a href="#education" className="text-gray-700 hover:text-blue-600 transition-colors">Educación</a>
             <a href="#projects" className="text-gray-700 hover:text-blue-600 transition-colors">Proyectos</a>
-            <a href="#contact" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Contacto</a>
+            <a href="#contact">
+              <Button variant="primary" size="sm">
+                Contacto
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -49,11 +58,13 @@ export default function Header() {
               <a href="#skills" className="block px-3 py-2 text-gray-700 hover:text-blue-600">Habilidades</a>
               <a href="#education" className="block px-3 py-2 text-gray-700 hover:text-blue-600">Educación</a>
               <a href="#projects" className="block px-3 py-2 text-gray-700 hover:text-blue-600">Proyectos</a>
-              <a href="#contact" className="block px-3 py-2 bg-blue-600 text-white rounded-lg">Contacto</a>
+              <a href="#contact" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
+                <Button variant="primary" fullWidth size="sm">Contacto</Button>
+              </a>
             </div>
           </div>
         )}
-      </nav>
+      </Container>
     </header>
   );
 }

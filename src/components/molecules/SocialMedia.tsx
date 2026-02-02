@@ -1,4 +1,5 @@
 import { socialLinks } from "@/utils/socialLinks";
+import Link from "next/link";
 import { FC } from "react";
 
 type SocialMediaType = 'footer' | 'contact';
@@ -10,7 +11,7 @@ export const SocialMedia: FC<SocialMediaProps> = ({ type = 'footer' }) => {
   return (
     <div className="flex space-x-4">
       {socialLinks.map((link) => (
-        <a
+        <Link
           target="_blank"
           key={link.name}
           href={link.href}
@@ -31,7 +32,7 @@ export const SocialMedia: FC<SocialMediaProps> = ({ type = 'footer' }) => {
           >
             <path d={link.path} />
           </svg>
-        </a>
+        </Link>
       ))}
     </div>
   );

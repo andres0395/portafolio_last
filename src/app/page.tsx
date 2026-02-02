@@ -1,12 +1,12 @@
-import Header from '@/components/Header';
-import Hero from '@/components/Hero';
-import About from '@/components/About';
-import Skills from '@/components/Skills';
-import Experience from '@/components/Experience';
-import Education from '@/components/Education';
-import Projects from '@/components/Projects';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
+import Header from '@/components/organisms/Header';
+import Hero from '@/components/organisms/Hero';
+import About from '@/components/organisms/About';
+import Skills from '@/components/organisms/Skills';
+import Experience from '@/components/organisms/Experience';
+import Education from '@/components/organisms/Education';
+import Projects from '@/components/organisms/Projects';
+import Contact from '@/components/organisms/Contact';
+import Footer from '@/components/organisms/Footer';
 
 export default function Home() {
   return (

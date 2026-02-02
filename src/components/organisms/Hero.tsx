@@ -1,37 +1,43 @@
+import Link from 'next/link';
+import { Container } from '../atoms/Container';
+import { Typography } from '../atoms/Typography';
+import { Button } from '../atoms/Button';
+
 export default function Hero() {
   return (
     <section className="pt-20 pb-16 bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Container>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+            <Typography variant="h1" className="mb-6">
               Hola, soy{' '}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Andrés Felipe Muñoz
               </span>
-            </h1>
-            <h2 className="text-xl sm:text-2xl text-gray-600 mb-8">
+            </Typography>
+            <Typography variant="h4" className="text-gray-600 mb-8" component="h2">
               Técnico en Desarrollo y Mantenimiento de Software
-            </h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl">
+            </Typography>
+            <Typography variant="body" className="text-lg text-gray-600 mb-8 max-w-2xl">
               Desarrollador Web Full Stack con sólida experiencia en Next.js y Nest.js implementando patrones de
               diseño atómico. Apasionado por la creación de soluciones innovadoras y sistemas de gestión
               empresarial, con dominio de Angular, React y Node.js.
-            </p>
+            </Typography>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <a
-                href="#projects"
-                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
-              >
-                Ver Proyectos
-              </a>
+              <Link href="#projects">
+                <Button variant="primary" size="lg" className="w-full sm:w-auto">
+                  Ver Proyectos
+                </Button>
+              </Link>
               <a
                 href="/pdfs/HVElempleo1036663334.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+                className="w-full sm:w-auto"
               >
-                Descargar CV
+                <Button variant="outline" size="lg" fullWidth>
+                  Descargar CV
+                </Button>
               </a>
             </div>
           </div>
@@ -68,7 +74,7 @@ export default function Hero() {
             <div className="absolute -bottom-8 -left-4 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

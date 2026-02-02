@@ -1,3 +1,4 @@
+import { dateVersion } from '@/utils/dateVersion';
 import Link from 'next/link';
 
 export const metadata = {
@@ -11,8 +12,8 @@ export default function PrivacyPolicy() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6 transition-colors"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -24,7 +25,7 @@ export default function PrivacyPolicy() {
             Política de Privacidad
           </h1>
           <p className="text-xl text-gray-600">
-            Última actualización: {new Date().toLocaleDateString('es-ES')}
+            Última actualización: {dateVersion()}
           </p>
         </div>
 
@@ -34,7 +35,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Información que Recopilamos</h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                Como desarrollador freelance, recopilo únicamente la información necesaria para 
+                Como desarrollador freelance, recopilo únicamente la información necesaria para
                 proporcionar mis servicios profesionales de desarrollo web.
               </p>
               <h3 className="text-lg font-semibold text-gray-800">Información Personal:</h3>
@@ -67,8 +68,8 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">3. Protección de Datos</h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                Implemento medidas de seguridad técnicas y organizativas apropiadas para 
-                proteger su información personal contra acceso no autorizado, alteración, 
+                Implemento medidas de seguridad técnicas y organizativas apropiadas para
+                proteger su información personal contra acceso no autorizado, alteración,
                 divulgación o destrucción.
               </p>
               <h3 className="text-lg font-semibold text-gray-800">Medidas de Seguridad:</h3>
@@ -86,7 +87,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Compartir Información</h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                <strong>No vendo, alquilo o comparto</strong> su información personal con terceros, 
+                <strong>No vendo, alquilo o comparto</strong> su información personal con terceros,
                 excepto en las siguientes circunstancias limitadas:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
@@ -128,7 +129,7 @@ export default function PrivacyPolicy() {
                 <li><strong>Limitación:</strong> Solicitar la limitación del procesamiento</li>
               </ul>
               <p className="mt-4">
-                Para ejercer estos derechos, contácteme en: 
+                Para ejercer estos derechos, contácteme en:
                 <a href="mailto:andres.Muñoz@email.com" className="text-blue-600 hover:text-blue-700 ml-1">
                   andres.Muñoz@email.com
                 </a>
@@ -148,7 +149,7 @@ export default function PrivacyPolicy() {
                 <li>Resolver disputas y hacer cumplir acuerdos</li>
               </ul>
               <p className="mt-4">
-                Generalmente, los datos se conservan durante 7 años después de la finalización 
+                Generalmente, los datos se conservan durante 7 años después de la finalización
                 del proyecto, salvo que la ley requiera un período diferente.
               </p>
             </div>
@@ -158,7 +159,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Cambios en esta Política</h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                Puedo actualizar esta Política de Privacidad ocasionalmente. Los cambios 
+                Puedo actualizar esta Política de Privacidad ocasionalmente. Los cambios
                 significativos serán notificados a través de:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
@@ -173,7 +174,7 @@ export default function PrivacyPolicy() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Contacto</h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                Si tiene preguntas sobre esta Política de Privacidad o sobre cómo manejo 
+                Si tiene preguntas sobre esta Política de Privacidad o sobre cómo manejo
                 su información personal, puede contactarme:
               </p>
               <div className="bg-gray-50 p-4 rounded-lg">
@@ -190,20 +191,20 @@ export default function PrivacyPolicy() {
         {/* Footer Navigation */}
         <div className="mt-12 text-center">
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="text-blue-600 hover:text-blue-700 transition-colors"
             >
               Inicio
             </Link>
-            <Link 
-              href="/terms" 
+            <Link
+              href="/terms"
               className="text-blue-600 hover:text-blue-700 transition-colors"
             >
               Términos de Uso
             </Link>
-            <Link 
-              href="#contact" 
+            <Link
+              href="#contact"
               className="text-blue-600 hover:text-blue-700 transition-colors"
             >
               Contacto

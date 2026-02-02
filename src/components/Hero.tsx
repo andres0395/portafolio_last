@@ -14,9 +14,9 @@ export default function Hero() {
               Técnico en Desarrollo y Mantenimiento de Software
             </h2>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl">
-              Desarrollador Web Full Stack apasionado por la creación de soluciones innovadoras y funcionales, 
-              con experiencia en el desarrollo de sistemas de gestión empresarial. Especializado en Angular, 
-              React, Node.js y tecnologías modernas.
+              Desarrollador Web Full Stack con sólida experiencia en Next.js y Nest.js implementando patrones de
+              diseño atómico. Apasionado por la creación de soluciones innovadoras y sistemas de gestión
+              empresarial, con dominio de Angular, React y Node.js.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <a
@@ -35,7 +35,7 @@ export default function Hero() {
               </a>
             </div>
           </div>
-          
+
           <div className="relative">
             <div className="relative z-10 bg-white rounded-2xl shadow-2xl p-8">
               <div className="space-y-4">
@@ -50,7 +50,12 @@ export default function Hero() {
                     <br />
                     &nbsp;&nbsp;name: <span className="text-yellow-300">&apos;Andrés Muñoz&apos;</span>,
                     <br />
-                    &nbsp;&nbsp;skills: [<span className="text-yellow-300">&apos;React&apos;</span>, <span className="text-yellow-300">&apos;Node.js&apos;</span>, <span className="text-yellow-300">&apos;TypeScript&apos;</span>],
+                    &nbsp;&nbsp;skills: [
+                    <span className="text-yellow-300">&apos;Next.js&apos;</span>,
+                    <span className="text-yellow-300">&apos;Nest.js&apos;</span>,
+                    <span className="text-yellow-300">&apos;Atomic Design&apos;</span>,
+                    <span className="text-yellow-300">&apos;TypeScript&apos;</span>
+                    ],
                     <br />
                     &nbsp;&nbsp;passion: <span className="text-yellow-300">&apos;Creating amazing web experiences&apos;</span>
                     <br />

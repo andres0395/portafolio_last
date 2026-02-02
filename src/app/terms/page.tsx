@@ -1,3 +1,4 @@
+import { dateVersion } from '@/utils/dateVersion';
 import Link from 'next/link';
 
 export const metadata = {
@@ -11,8 +12,8 @@ export default function TermsOfService() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6 transition-colors"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -24,7 +25,7 @@ export default function TermsOfService() {
             Términos de Uso
           </h1>
           <p className="text-xl text-gray-600">
-            Última actualización: {new Date().toLocaleDateString('es-ES')}
+            Última actualización: {dateVersion()}
           </p>
         </div>
 
@@ -34,13 +35,13 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Aceptación de los Términos</h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                Al acceder y utilizar este sitio web y contratar mis servicios de desarrollo web, 
-                usted acepta estar sujeto a estos Términos de Uso y todas las leyes y regulaciones 
-                aplicables. Si no está de acuerdo con alguno de estos términos, no debe utilizar 
+                Al acceder y utilizar este sitio web y contratar mis servicios de desarrollo web,
+                usted acepta estar sujeto a estos Términos de Uso y todas las leyes y regulaciones
+                aplicables. Si no está de acuerdo con alguno de estos términos, no debe utilizar
                 este sitio web ni contratar mis servicios.
               </p>
               <p>
-                Estos términos se aplican a todos los visitantes, usuarios y otras personas que 
+                Estos términos se aplican a todos los visitantes, usuarios y otras personas que
                 accedan o utilicen el servicio.
               </p>
             </div>
@@ -69,10 +70,10 @@ export default function TermsOfService() {
             <div className="space-y-4 text-gray-600">
               <h3 className="text-lg font-semibold text-gray-800">3.1 Consulta Inicial</h3>
               <p>
-                Toda colaboración comienza con una consulta inicial gratuita para entender 
+                Toda colaboración comienza con una consulta inicial gratuita para entender
                 sus necesidades y objetivos del proyecto.
               </p>
-              
+
               <h3 className="text-lg font-semibold text-gray-800">3.2 Propuesta y Cotización</h3>
               <p>
                 Después de la consulta, proporcionaré una propuesta detallada que incluye:
@@ -86,7 +87,7 @@ export default function TermsOfService() {
 
               <h3 className="text-lg font-semibold text-gray-800">3.3 Contrato de Servicios</h3>
               <p>
-                Una vez aceptada la propuesta, se firmará un contrato específico que detalla 
+                Una vez aceptada la propuesta, se firmará un contrato específico que detalla
                 todos los aspectos del proyecto, incluyendo entregables, plazos y condiciones de pago.
               </p>
             </div>
@@ -125,13 +126,13 @@ export default function TermsOfService() {
             <div className="space-y-4 text-gray-600">
               <h3 className="text-lg font-semibold text-gray-800">5.1 Código Personalizado</h3>
               <p>
-                Todo el código personalizado desarrollado específicamente para su proyecto 
+                Todo el código personalizado desarrollado específicamente para su proyecto
                 se transfiere al cliente una vez completado el pago final.
               </p>
 
               <h3 className="text-lg font-semibold text-gray-800">5.2 Componentes Reutilizables</h3>
               <p>
-                Me reservo el derecho de reutilizar componentes, técnicas y conocimientos 
+                Me reservo el derecho de reutilizar componentes, técnicas y conocimientos
                 generales adquiridos durante el desarrollo de su proyecto en futuros trabajos.
               </p>
 
@@ -142,7 +143,7 @@ export default function TermsOfService() {
 
               <h3 className="text-lg font-semibold text-gray-800">5.4 Portfolio y Referencias</h3>
               <p>
-                Tengo derecho a incluir el proyecto en mi portfolio y usar como referencia, 
+                Tengo derecho a incluir el proyecto en mi portfolio y usar como referencia,
                 a menos que se acuerde específicamente lo contrario por escrito.
               </p>
             </div>
@@ -169,13 +170,13 @@ export default function TermsOfService() {
             <div className="space-y-4 text-gray-600">
               <h3 className="text-lg font-semibold text-gray-800">7.1 Garantía de Calidad</h3>
               <p>
-                Garantizo que todo el trabajo se realizará con estándares profesionales 
+                Garantizo que todo el trabajo se realizará con estándares profesionales
                 y mejores prácticas de la industria.
               </p>
 
               <h3 className="text-lg font-semibold text-gray-800">7.2 Período de Garantía</h3>
               <p>
-                Ofrezco un período de garantía de 30 días después de la entrega final 
+                Ofrezco un período de garantía de 30 días después de la entrega final
                 para corregir errores o bugs sin costo adicional.
               </p>
 
@@ -194,7 +195,7 @@ export default function TermsOfService() {
             <div className="space-y-4 text-gray-600">
               <h3 className="text-lg font-semibold text-gray-800">8.1 Cambios en el Alcance</h3>
               <p>
-                Los cambios significativos en el alcance del proyecto pueden requerir 
+                Los cambios significativos en el alcance del proyecto pueden requerir
                 ajustes en el cronograma y costo, que se documentarán por escrito.
               </p>
 
@@ -223,7 +224,7 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Confidencialidad</h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                Me comprometo a mantener la confidencialidad de toda la información 
+                Me comprometo a mantener la confidencialidad de toda la información
                 sensible del cliente, incluyendo:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
@@ -234,7 +235,7 @@ export default function TermsOfService() {
                 <li>Cualquier información marcada como confidencial</li>
               </ul>
               <p>
-                Esta obligación de confidencialidad permanece vigente incluso después 
+                Esta obligación de confidencialidad permanece vigente incluso después
                 de la finalización del proyecto.
               </p>
             </div>
@@ -245,19 +246,19 @@ export default function TermsOfService() {
             <div className="space-y-4 text-gray-600">
               <h3 className="text-lg font-semibold text-gray-800">10.1 Comunicación Directa</h3>
               <p>
-                Cualquier disputa debe intentar resolverse primero a través de 
+                Cualquier disputa debe intentar resolverse primero a través de
                 comunicación directa y de buena fe.
               </p>
 
               <h3 className="text-lg font-semibold text-gray-800">10.2 Mediación</h3>
               <p>
-                Si la comunicación directa no resuelve la disputa, las partes 
+                Si la comunicación directa no resuelve la disputa, las partes
                 pueden optar por mediación antes de proceder a acciones legales.
               </p>
 
               <h3 className="text-lg font-semibold text-gray-800">10.3 Jurisdicción</h3>
               <p>
-                Estos términos se rigen por las leyes de Colombia, y cualquier 
+                Estos términos se rigen por las leyes de Colombia, y cualquier
                 disputa legal se resolverá en los tribunales de Bogotá, Colombia.
               </p>
             </div>
@@ -267,12 +268,12 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Modificaciones de los Términos</h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                Me reservo el derecho de modificar estos términos en cualquier momento. 
-                Los cambios significativos se notificarán a los clientes activos con 
+                Me reservo el derecho de modificar estos términos en cualquier momento.
+                Los cambios significativos se notificarán a los clientes activos con
                 al menos 30 días de anticipación.
               </p>
               <p>
-                El uso continuado de los servicios después de las modificaciones 
+                El uso continuado de los servicios después de las modificaciones
                 constituye la aceptación de los nuevos términos.
               </p>
             </div>
@@ -282,7 +283,7 @@ export default function TermsOfService() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">12. Contacto</h2>
             <div className="space-y-4 text-gray-600">
               <p>
-                Para preguntas sobre estos Términos de Uso o para discutir un proyecto, 
+                Para preguntas sobre estos Términos de Uso o para discutir un proyecto,
                 puede contactarme:
               </p>
               <div className="bg-gray-50 p-4 rounded-lg">
@@ -299,20 +300,20 @@ export default function TermsOfService() {
         {/* Footer Navigation */}
         <div className="mt-12 text-center">
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="text-blue-600 hover:text-blue-700 transition-colors"
             >
               Inicio
             </Link>
-            <Link 
-              href="/privacy" 
+            <Link
+              href="/privacy"
               className="text-blue-600 hover:text-blue-700 transition-colors"
             >
               Política de Privacidad
             </Link>
-            <Link 
-              href="#contact" 
+            <Link
+              href="#contact"
               className="text-blue-600 hover:text-blue-700 transition-colors"
             >
               Contacto

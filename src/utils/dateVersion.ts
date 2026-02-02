@@ -1,0 +1,1 @@
+export const dateVersion = () => `02/02/2026`;

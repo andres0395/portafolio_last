@@ -3,34 +3,34 @@ export default function Skills() {
     {
       title: "Frontend",
       skills: [
-        { name: "Angular", level: 95 },
-        { name: "React", level: 90 },
-        { name: "TypeScript", level: 88 },
-        { name: "JavaScript", level: 95 },
-        { name: "HTML5", level: 92 },
-        { name: "CSS", level: 90 },
-        { name: "Bootstrap", level: 85 },
-        { name: "Ionic", level: 80 }
+        { name: "Angular", level: 95, color: "from-red-500 to-red-600" },
+        { name: "React", level: 90, color: "from-blue-500 to-blue-600" },
+        { name: "TypeScript", level: 88, color: "from-blue-500 to-blue-600" },
+        { name: "JavaScript", level: 95, color: "from-yellow-500 to-yellow-600" },
+        { name: "HTML5", level: 92, color: "from-red-500 to-red-600" },
+        { name: "CSS", level: 90, color: "from-blue-500 to-blue-600" },
+        { name: "Tailwind", level: 85, color: "from-cyan-500 to-cyan-600" },
+        { name: "Next.js", level: 80, color: "from-black to-black" }
       ]
     },
     {
       title: "Backend",
       skills: [
-        { name: "Node.js", level: 90 },
-        { name: "Express", level: 88 },
-        { name: "FastAPI", level: 85 },
-        { name: "PHP", level: 80 },
-        { name: "Python", level: 75 },
-        { name: "Laravel", level: 78 }
+        { name: "Node.js", level: 90, color: "from-green-500 to-green-600" },
+        { name: "Express", level: 88, color: "from-green-500 to-green-600" },
+        { name: "FastAPI", level: 85, color: "from-green-500 to-green-600" },
+        { name: "PHP", level: 80, color: "from-purple-500 to-purple-600" },
+        { name: "Python", level: 75, color: "from-blue-500 to-green-600" },
+        { name: "Laravel", level: 78, color: "from-purple-500 to-purple-600" }
       ]
     },
     {
       title: "Bases de Datos",
       skills: [
-        { name: "PostgreSQL", level: 88 },
-        { name: "MySQL", level: 85 },
-        { name: "MongoDB", level: 80 },
-        { name: "SQLAlchemy", level: 75 }
+        { name: "PostgreSQL", level: 88, color: "from-blue-500 to-blue-600" },
+        { name: "MySQL", level: 85, color: "from-blue-500 to-blue-600" },
+        { name: "MongoDB", level: 80, color: "from-green-500 to-green-600" },
+        { name: "SQLAlchemy", level: 75, color: "from-green-500 to-green-600" }
       ]
     }
   ];
@@ -58,12 +58,14 @@ export default function Skills() {
                   <div key={skillIndex}>
                     <div className="flex justify-between items-center mb-2">
                       <span className="text-gray-700 font-medium">{skill.name}</span>
-                      <span className="text-gray-500 text-sm">{skill.level}%</span>
                     </div>
                     <div className="w-full bg-gray-200 rounded-full h-2">
                       <div
-                        className="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${skill.level}%` }}
+                        className={`
+                          bg-gradient-to-r ${skill.color} h-2 
+                          rounded-full transition-all duration-1000 ease-out ${skill.level}
+                          `}
+                        style={{ width: `100%` }}
                       ></div>
                     </div>
                   </div>

@@ -1,62 +1,42 @@
 export const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "E-Commerce Startup Estados Unidos",
     description: "Plataforma de comercio electrónico completa con panel de administración, gestión de inventario, procesamiento de pagos y análisis en tiempo real.",
-    image: "/api/placeholder/400/250",
-    technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "AWS"],
+    image: "/img/ecommerce.png",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Tailwind",
+      "NestJS",
+      "Autenticación JWT",
+      "Roles",
+    ],
     features: [
       "Carrito de compras en tiempo real",
       "Panel de administración completo",
-      "Integración con pasarelas de pago",
+      "Integración con pasarelas de pago Square",
       "Sistema de inventario automatizado"
     ],
     github: "#",
-    demo: "#",
-    status: "Completado"
+    demo: "https://test-ecom.internationalfood360.com/",
+    status: "En Desarrollo"
   },
   {
-    title: "Task Management App",
-    description: "Aplicación de gestión de tareas colaborativa con funcionalidades de tiempo real, asignación de equipos y seguimiento de progreso.",
-    image: "/api/placeholder/400/250",
-    technologies: ["Next.js", "TypeScript", "Prisma", "Socket.io", "Tailwind"],
+    title: "Landing Page de Transporte de Lujo",
+    description: "Landing page para una empresa de transporte de lujo con sistema de reservas y gestión de flotas.",
+    image: "/img/transport.png",
+    technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind"],
     features: [
-      "Colaboración en tiempo real",
-      "Gestión de equipos",
-      "Notificaciones push",
+      "Sistema de reservas",
+      "Gestión de flotas",
+      "Notificaciones por correo electrónico",
+      "Generación de cotizaciones",
+      "Generacion de Facturas PDF y envio por correo",
       "Dashboard analítico"
     ],
     github: "#",
-    demo: "#",
-    status: "En desarrollo"
-  },
-  {
-    title: "Weather Dashboard",
-    description: "Dashboard meteorológico interactivo con pronósticos detallados, mapas interactivos y alertas personalizadas basadas en ubicación.",
-    image: "/api/placeholder/400/250",
-    technologies: ["React", "D3.js", "OpenWeather API", "Mapbox", "Chart.js"],
-    features: [
-      "Pronósticos de 7 días",
-      "Mapas interactivos",
-      "Alertas personalizadas",
-      "Visualización de datos avanzada"
-    ],
-    github: "#",
-    demo: "#",
-    status: "Completado"
-  },
-  {
-    title: "Social Media Analytics",
-    description: "Herramienta de análisis de redes sociales que proporciona insights detallados sobre engagement, alcance y tendencias de contenido.",
-    image: "/api/placeholder/400/250",
-    technologies: ["Vue.js", "Python", "FastAPI", "MongoDB", "Redis"],
-    features: [
-      "Análisis de múltiples plataformas",
-      "Reportes automatizados",
-      "Predicción de tendencias",
-      "API REST completa"
-    ],
-    github: "#",
-    demo: "#",
+    demo: "https://gjtwothousand.netlify.app/",
     status: "Completado"
   }
 ];

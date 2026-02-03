@@ -1,11 +1,13 @@
+'use client';
 import Link from 'next/link';
 import { Container } from '../atoms/Container';
 import { Typography } from '../atoms/Typography';
 import { SocialMedia } from '../molecules/SocialMedia';
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
+  const path = usePathname();
   return (
     <footer className="bg-gray-900 text-white py-12">
       <Container>
@@ -15,7 +17,9 @@ export default function Footer() {
             <Typography variant="body" className="text-gray-400 mb-6 max-w-sm">
               Desarrollador Full Stack apasionado por crear soluciones web innovadoras y escalables.
             </Typography>
-            <SocialMedia type="footer" />
+            {path !== '/contact' && (
+              <SocialMedia type="footer" />
+            )}
           </div>
 
           <div>
@@ -44,12 +48,16 @@ export default function Footer() {
             © {currentYear} Andrés Felipe Muñoz. Todos los derechos reservados.
           </Typography>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="/privacy" className="hover:text-white transition-colors">
-              Política de Privacidad
-            </Link>
-            <Link href="/terms" className="hover:text-white transition-colors">
-              Términos de Uso
-            </Link>
+            {path !== '/privacy' && (
+              <Link href="/privacy" className="hover:text-white transition-colors">
+                Política de Privacidad
+              </Link>
+            )}
+            {path !== '/terms' && (
+              <Link href="/terms" className="hover:text-white transition-colors">
+                Términos de Uso
+              </Link>
+            )}
           </div>
         </div>
       </Container>

@@ -1,13 +1,18 @@
 'use client';
 
-import { useState } from 'react';
 import { Container } from '../atoms/Container';
 import { Button } from '../atoms/Button';
 import { Typography } from '../atoms/Typography';
+import { useHeader } from '@/hooks/components/organisms/useHeader';
+import Link from 'next/link';
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const {
+    isMenuOpen,
+    setIsMenuOpen,
+    navItems,
+    pathname
+  } = useHeader();
   return (
     <header className="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-200">
       <Container>
@@ -20,16 +25,32 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#about" className="text-gray-700 hover:text-blue-600 transition-colors">Sobre mí</a>
-            <a href="#experience" className="text-gray-700 hover:text-blue-600 transition-colors">Experiencia</a>
-            <a href="#skills" className="text-gray-700 hover:text-blue-600 transition-colors">Habilidades</a>
-            <a href="#education" className="text-gray-700 hover:text-blue-600 transition-colors">Educación</a>
-            <a href="#projects" className="text-gray-700 hover:text-blue-600 transition-colors">Proyectos</a>
-            <a href="#contact">
-              <Button variant="primary" size="sm">
-                Contacto
-              </Button>
-            </a>
+            {
+              pathname === '/' ? (
+                <>
+                  {navItems.map((item) => (
+                    <a key={item.path} href={item.path} className="text-gray-700 hover:text-blue-600 transition-colors">
+                      {item.label}
+                    </a>
+                  ))}
+                </>
+              ) : (
+                <>
+                  <Link href="/">
+                    <Button variant="primary" size="sm">
+                      Inicio
+                    </Button>
+                  </Link>
+                </>
+              )
+            }
+            {pathname !== '/contact' ? (
+              <Link href="/contact">
+                <Button variant="primary" size="sm">
+                  Contacto
+                </Button>
+              </Link>
+            ) : null}
           </div>
 
           {/* Mobile menu button */}
@@ -53,14 +74,28 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
-              <a href="#about" className="block px-3 py-2 text-gray-700 hover:text-blue-600">Sobre mí</a>
-              <a href="#experience" className="block px-3 py-2 text-gray-700 hover:text-blue-600">Experiencia</a>
-              <a href="#skills" className="block px-3 py-2 text-gray-700 hover:text-blue-600">Habilidades</a>
-              <a href="#education" className="block px-3 py-2 text-gray-700 hover:text-blue-600">Educación</a>
-              <a href="#projects" className="block px-3 py-2 text-gray-700 hover:text-blue-600">Proyectos</a>
-              <a href="#contact" className="block px-3 py-2 text-gray-700 hover:text-blue-600">
-                <Button variant="primary" fullWidth size="sm">Contacto</Button>
-              </a>
+              {pathname === '/' ? (
+                <>
+                  {navItems.map((item) => (
+                    <a key={item.path} href={item.path} className="block px-3 py-2 text-gray-700 hover:text-blue-600">
+                      {item.label}
+                    </a>
+                  ))}
+                </>
+              ) : (
+                <>
+                  <Link href="/">
+                    <Button variant="primary" size="sm">
+                      Inicio
+                    </Button>
+                  </Link>
+                </>
+              )}
+              {pathname !== '/contact' ? (
+                <Link href="/contact">
+                  <Button variant="primary" fullWidth size="sm">Contacto</Button>
+                </Link>
+              ) : null}
             </div>
           </div>
         )}

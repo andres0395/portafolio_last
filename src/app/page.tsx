@@ -5,7 +5,6 @@ import Skills from '@/components/organisms/Skills';
 import Experience from '@/components/organisms/Experience';
 import Education from '@/components/organisms/Education';
 import Projects from '@/components/organisms/Projects';
-import Contact from '@/components/organisms/Contact';
 import Footer from '@/components/organisms/Footer';
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
       <Experience />
       <Education />
       <Projects />
-      <Contact />
       <Footer />
     </div>
   );

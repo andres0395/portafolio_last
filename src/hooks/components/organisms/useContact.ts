@@ -1,12 +1,10 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { email, phone, location } from "@/utils/consts/infoContact";
 
 
 export const useContact = () => {
   const router = useRouter();
-  const email = process.env.NEXT_PUBLIC_EMAIL;
-  const phone = process.env.NEXT_PUBLIC_PHONE;
-  const location = process.env.NEXT_PUBLIC_LOCATION;
 
   const [formData, setFormData] = useState({
     name: '',

@@ -6,6 +6,7 @@ import { Typography } from '../atoms/Typography';
 import { Tag } from '../atoms/Tag';
 import { Button } from '../atoms/Button';
 import { projects } from '@/utils/projects';
+import Link from 'next/link';
 
 export default function Projects() {
 
@@ -80,16 +81,15 @@ export default function Projects() {
 
                 {/* Action Buttons */}
                 <div className="flex space-x-3">
-                  <a href={project.demo} className="flex-1">
+                  <Link
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1">
                     <Button variant="primary" size="sm" fullWidth>
-                      Ver Demo
+                      Ver
                     </Button>
-                  </a>
-                  <a href={project.github} className="flex-1">
-                    <Button variant="secondary" size="sm" fullWidth>
-                      Código
-                    </Button>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </Card>
@@ -101,7 +101,7 @@ export default function Projects() {
           <Typography variant="body" className="text-gray-600 mb-6">
             ¿Interesado en ver más proyectos?
           </Typography>
-          <a href="#contact">
+          <a href="/contact">
             <Button variant="primary" size="lg">
               Hablemos sobre tu proyecto
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

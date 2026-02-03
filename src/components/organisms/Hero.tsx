@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Container } from '../atoms/Container';
 import { Typography } from '../atoms/Typography';
 import { Button } from '../atoms/Button';
+import { CVDownloadButton } from '../molecules/CVDownloadButton';
 
 export default function Hero() {
   return (
@@ -29,16 +30,7 @@ export default function Hero() {
                   Ver Proyectos
                 </Button>
               </Link>
-              <Link
-                href="/pdfs/HVElempleo1036663334.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto"
-              >
-                <Button variant="outline" size="lg" fullWidth>
-                  Descargar CV
-                </Button>
-              </Link>
+              <CVDownloadButton />
             </div>
           </div>
 

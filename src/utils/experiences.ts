@@ -1,5 +1,17 @@
 export const experiences = [
   {
+    title: "Desarrollador Full Stack Freelance",
+    company: "Independiente",
+    period: "Octubre 2025 - Actualidad",
+    description: "Desarrollo de soluciones web completas para clientes internacionales, incluyendo una plataforma de e-commerce y sistemas de gestión para transporte. Especialización en arquitecturas escalables con tecnologías modernas.",
+    technologies: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "TypeORM", "Tailwind", "Square API"],
+    achievements: [
+      "Desarrollé plataforma de E-Commerce para startup en EE.UU. con pagos y gestión de inventario",
+      "Creé sistema de reservas y gestión de flotas para empresa de transporte de lujo",
+      "Implementé paneles de administración y facturación automatizada"
+    ]
+  },
+  {
     title: "Desarrollador Web",
     company: "Quind",
     period: "Noviembre 2024 - Octubre 2025",

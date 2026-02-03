@@ -7,14 +7,20 @@ import { FormGroup } from "@/components/molecules/FormGroup";
 import { Input, TextArea } from "@/components/atoms/Input";
 import { Button } from "@/components/atoms/Button";
 import { SocialMedia } from "@/components/molecules/SocialMedia";
+import { Turnstile } from '@marsidev/react-turnstile';
 
 export default function ContactForm() {
   const {
     email,
     phone,
     location,
-    handleClick
+    formData,
+    handleChange,
+    handleSubmit,
+    handleClick,
+    loading,
   } = useContact();
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
       {/* Contact Info */}
@@ -73,26 +79,77 @@ export default function ContactForm() {
       {/* Contact Form */}
       <div className="bg-white rounded-xl shadow-lg p-8">
         <Typography variant="h3" className="mb-6">Envíame un mensaje</Typography>
-        <form className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
+          {/* Honeypot field - hidden from users but visible to bots */}
+          <div className="hidden opacity-0 absolute -z-10">
+            <input
+              type="text"
+              id="company" // plausible name for bots
+              name="company"
+              tabIndex={-1}
+              autoComplete="off"
+              // eslint-disable-next-line @typescript-eslint/no-explicit-any
+              value={(formData as any).company || ''}
+              onChange={handleChange}
+            />
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <FormGroup label="Nombre" htmlFor="name" required>
-              <Input type="text" id="name" placeholder="Tu nombre" />
+              <Input
+                type="text"
+                id="name"
+                placeholder="Tu nombre"
+                value={formData.name}
+                onChange={handleChange}
+                disabled={loading}
+              />
             </FormGroup>
             <FormGroup label="Email" htmlFor="email" required>
-              <Input type="email" id="email" placeholder="tu@email.com" />
+              <Input
+                type="email"
+                id="email"
+                placeholder="tu@email.com"
+                value={formData.email}
+                onChange={handleChange}
+                disabled={loading}
+              />
             </FormGroup>
           </div>
 
           <FormGroup label="Asunto" htmlFor="subject" required>
-            <Input type="text" id="subject" placeholder="Asunto del mensaje" />
+            <Input
+              type="text"
+              id="subject"
+              placeholder="Asunto del mensaje"
+              value={formData.subject}
+              onChange={handleChange}
+              disabled={loading}
+            />
           </FormGroup>
 
           <FormGroup label="Mensaje" htmlFor="message" required>
-            <TextArea id="message" rows={4} placeholder="Escribe tu mensaje aquí..." />
+            <TextArea
+              id="message"
+              rows={4}
+              placeholder="Escribe tu mensaje aquí..."
+              value={formData.message}
+              onChange={handleChange}
+              disabled={loading}
+            />
           </FormGroup>
 
-          <Button type="submit" variant="primary" fullWidth size="lg">
-            Enviar Mensaje
+          <div className="flex justify-center">
+            <Turnstile
+              siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || ''}
+              onSuccess={(token) => {
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                handleChange({ target: { id: 'turnstileToken', value: token } } as any);
+              }}
+            />
+          </div>
+
+          <Button type="submit" variant="primary" fullWidth size="lg" disabled={loading}>
+            {loading ? 'Enviando...' : 'Enviar Mensaje'}
           </Button>
         </form>
       </div>

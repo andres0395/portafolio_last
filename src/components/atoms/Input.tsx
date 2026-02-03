@@ -12,7 +12,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(({
   return (
     <input
       ref={ref}
-      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-opacity-50 transition-colors outline-none
+      className={`text-black w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-opacity-50 transition-colors outline-none
         ${error
           ? 'border-red-300 focus:border-red-500 focus:ring-red-200'
           : 'border-gray-300 focus:border-blue-500 focus:ring-blue-200'
@@ -32,7 +32,7 @@ export const TextArea = forwardRef<HTMLTextAreaElement, InputHTMLAttributes<HTML
   return (
     <textarea
       ref={ref}
-      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-opacity-50 transition-colors outline-none resize-none
+      className={`text-black w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-opacity-50 transition-colors outline-none resize-none
         ${error
           ? 'border-red-300 focus:border-red-500 focus:ring-red-200'
           : 'border-gray-300 focus:border-blue-500 focus:ring-blue-200'

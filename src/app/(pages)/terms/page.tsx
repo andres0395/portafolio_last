@@ -1,6 +1,7 @@
 import { dateVersion } from '@/utils/dateVersion';
 import { email, phone, location } from '@/utils/consts/infoContact';
 import { TemplateInfo } from '@/components/molecules/TemplateInfo';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Términos de Uso - Andrés Muñoz',
@@ -271,7 +272,13 @@ export default function TermsOfService() {
           <div className="bg-gray-50 p-4 rounded-lg">
             <p><strong>Andrés Muñoz</strong></p>
             <p>Desarrollador Full Stack</p>
-            <p>Email: <a href={`mailto:${email}`} className="text-blue-600 hover:text-blue-700">{email}</a></p>
+            <p>Email:
+              <Link
+                href={`mailto:${email}`}
+                className="text-blue-600 hover:text-blue-700">
+                {email}
+              </Link>
+            </p>
             <p>Teléfono: {phone}</p>
             <p>Ubicación: {location}</p>
           </div>

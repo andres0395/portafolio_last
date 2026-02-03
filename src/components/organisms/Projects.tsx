@@ -7,6 +7,7 @@ import { Tag } from '../atoms/Tag';
 import { Button } from '../atoms/Button';
 import { projects } from '@/utils/projects';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Projects() {
 
@@ -22,8 +23,14 @@ export default function Projects() {
           {projects.map((project, index) => (
             <Card key={index} hover padding="none" className="group">
               {/* Project Image */}
-              <div className="relative h-48 bg-gradient-to-br from-blue-400 to-purple-500 overflow-hidden">
-                <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-300"></div>
+              <div className="relative h-48 overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-300"></div>
                 <div className="absolute top-4 right-4">
                   <Tag
                     size="sm"
@@ -31,13 +38,6 @@ export default function Projects() {
                   >
                     {project.status}
                   </Tag>
-                </div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-white text-6xl opacity-20">
-                    <svg fill="currentColor" viewBox="0 0 20 20" className="w-16 h-16">
-                      <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8z" clipRule="evenodd" />
-                    </svg>
-                  </div>
                 </div>
               </div>
 
@@ -101,14 +101,14 @@ export default function Projects() {
           <Typography variant="body" className="text-gray-600 mb-6">
             ¿Interesado en ver más proyectos?
           </Typography>
-          <a href="/contact">
+          <Link href="/contact">
             <Button variant="primary" size="lg">
               Hablemos sobre tu proyecto
               <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Button>
-          </a>
+          </Link>
         </div>
       </Container>
     </Section>

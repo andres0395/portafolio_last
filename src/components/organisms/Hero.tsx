@@ -29,7 +29,7 @@ export default function Hero() {
                   Ver Proyectos
                 </Button>
               </Link>
-              <a
+              <Link
                 href="/pdfs/HVElempleo1036663334.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -38,7 +38,7 @@ export default function Hero() {
                 <Button variant="outline" size="lg" fullWidth>
                   Descargar CV
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
 

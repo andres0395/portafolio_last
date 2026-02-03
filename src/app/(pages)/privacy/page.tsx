@@ -1,6 +1,7 @@
 import { dateVersion } from '@/utils/dateVersion';
 import { email, phone, location } from '@/utils/consts/infoContact';
 import { TemplateInfo } from '@/components/molecules/TemplateInfo';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Política de Privacidad - Andrés Muñoz',
@@ -112,9 +113,9 @@ export default function PrivacyPolicy() {
           </ul>
           <p className="mt-4">
             Para ejercer estos derechos, contácteme en:
-            <a href={`mailto:${email}`} className="text-blue-600 hover:text-blue-700 ml-1">
+            <Link href={`mailto:${email}`} className="text-blue-600 hover:text-blue-700 ml-1">
               {email}
-            </a>
+            </Link>
           </p>
         </div>
       </section>
@@ -162,7 +163,13 @@ export default function PrivacyPolicy() {
           <div className="bg-gray-50 p-4 rounded-lg">
             <p><strong>Andrés Muñoz</strong></p>
             <p>Desarrollador Full Stack</p>
-            <p>Email: <a href={`mailto:${email}`} className="text-blue-600 hover:text-blue-700">{email}</a></p>
+            <p>Email:
+              <Link
+                href={`mailto:${email}`}
+                className="text-blue-600 hover:text-blue-700">
+                {email}
+              </Link>
+            </p>
             <p>Teléfono: {phone}</p>
             <p>Ubicación: {location}</p>
           </div>

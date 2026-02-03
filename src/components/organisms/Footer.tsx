@@ -25,10 +25,34 @@ export default function Footer() {
           <div>
             <Typography variant="h4" component="h4" className="text-lg font-semibold mb-4 text-white">Enlaces Rápidos</Typography>
             <ul className="space-y-2">
-              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">Sobre mí</a></li>
-              <li><a href="#projects" className="text-gray-400 hover:text-white transition-colors">Proyectos</a></li>
-              <li><a href="#skills" className="text-gray-400 hover:text-white transition-colors">Habilidades</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contacto</a></li>
+              <li>
+                <Link
+                  href="#about"
+                  className="text-gray-400 hover:text-white transition-colors">
+                  Sobre mí
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#projects"
+                  className="text-gray-400 hover:text-white transition-colors">
+                  Proyectos
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#skills"
+                  className="text-gray-400 hover:text-white transition-colors">
+                  Habilidades
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="text-gray-400 hover:text-white transition-colors">
+                  Contacto
+                </Link>
+              </li>
             </ul>
           </div>
 

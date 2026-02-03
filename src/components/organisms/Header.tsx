@@ -29,9 +29,12 @@ export default function Header() {
               pathname === '/' ? (
                 <>
                   {navItems.map((item) => (
-                    <a key={item.path} href={item.path} className="text-gray-700 hover:text-blue-600 transition-colors">
+                    <Link
+                      key={item.path}
+                      href={item.path}
+                      className="text-gray-700 hover:text-blue-600 transition-colors">
                       {item.label}
-                    </a>
+                    </Link>
                   ))}
                 </>
               ) : (
@@ -77,9 +80,12 @@ export default function Header() {
               {pathname === '/' ? (
                 <>
                   {navItems.map((item) => (
-                    <a key={item.path} href={item.path} className="block px-3 py-2 text-gray-700 hover:text-blue-600">
+                    <Link
+                      key={item.path}
+                      href={item.path}
+                      className="block px-3 py-2 text-gray-700 hover:text-blue-600">
                       {item.label}
-                    </a>
+                    </Link>
                   ))}
                 </>
               ) : (

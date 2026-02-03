@@ -15,7 +15,7 @@ export const experiences = [
     title: "Desarrollador Web",
     company: "Quind",
     period: "Noviembre 2024 - Octubre 2025",
-    description: "Desarrollo como Full Stack con FastAPI y React como frameworks principales en el desarrollo de un ERP interno. Implementación del patrón de diseño atómico para maximizar la reutilización. Desarrollo con Angular e Ionic para aplicaciones móviles utilizando microfrontends.",
+    description: "Trabajé como Full Stack con FastAPI y React como frameworks principales en el desarrollo de un ERP interno. Implementación del patrón de diseño atómico para maximizar la reutilización. Desarrollo con Angular e Ionic para aplicaciones móviles utilizando microfrontends.",
     technologies: ["FastAPI", "React", "Angular", "Ionic", "Tailwind", "MySQL", "AWS Lambda", "SQLAlchemy", "Pydantic"],
     achievements: [
       "Implementé patrón de diseño atómico para máxima reutilización de componentes",

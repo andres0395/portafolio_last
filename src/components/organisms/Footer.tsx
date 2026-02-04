@@ -8,6 +8,8 @@ import { usePathname } from 'next/navigation';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const path = usePathname();
+  const linkRef = path === '/' ? '' : '/';
+  console.log(path);
   return (
     <footer className="bg-gray-900 text-white py-12">
       <Container>
@@ -27,21 +29,21 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link
-                  href="#about"
+                  href={`${linkRef}#about`}
                   className="text-gray-400 hover:text-white transition-colors">
                   Sobre mí
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#projects"
+                  href={`${linkRef}#projects`}
                   className="text-gray-400 hover:text-white transition-colors">
                   Proyectos
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#skills"
+                  href={`${linkRef}#skills`}
                   className="text-gray-400 hover:text-white transition-colors">
                   Habilidades
                 </Link>
@@ -59,10 +61,34 @@ export default function Footer() {
           <div>
             <Typography variant="h4" component="h4" className="text-lg font-semibold mb-4 text-white">Servicios</Typography>
             <ul className="space-y-2">
-              <li className="text-gray-400">Desarrollo Web Full Stack</li>
-              <li className="text-gray-400">Aplicaciones Móviles</li>
-              <li className="text-gray-400">Consultoría Técnica</li>
-              <li className="text-gray-400">Optimización y SEO</li>
+              <li>
+                <Link
+                  href="/services/full-stack-development"
+                  className="text-gray-400 hover:text-white transition-colors">
+                  Desarrollo Web Full Stack
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/mobile-development"
+                  className="text-gray-400 hover:text-white transition-colors">
+                  Aplicaciones Móviles
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/technical-consulting"
+                  className="text-gray-400 hover:text-white transition-colors">
+                  Consultoría Técnica
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services/seo-optimization"
+                  className="text-gray-400 hover:text-white transition-colors">
+                  Optimización y SEO
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

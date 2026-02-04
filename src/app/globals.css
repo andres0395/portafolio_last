@@ -23,6 +23,12 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 /* Custom animations */
@@ -30,12 +36,15 @@ body {
   0% {
     transform: translate(0px, 0px) scale(1);
   }
+
   33% {
     transform: translate(30px, -50px) scale(1.1);
   }
+
   66% {
     transform: translate(-20px, 20px) scale(0.9);
   }
+
   100% {
     transform: translate(0px, 0px) scale(1);
   }
@@ -45,15 +54,19 @@ body {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
 }
 
 @keyframes blink-caret {
-  from, to {
+
+  from,
+  to {
     border-color: transparent;
   }
+
   50% {
     border-color: #10b981;
   }
@@ -74,10 +87,7 @@ body {
   animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
+
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {

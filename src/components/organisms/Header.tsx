@@ -18,7 +18,7 @@ export default function Header() {
       <Container>
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <Typography variant="h3" className="text-2xl font-bold text-gray-900">
+            <Typography variant="h3" className="text-lg md:text-2xl font-bold text-gray-900">
               Andrés Felipe Muñoz
             </Typography>
           </div>

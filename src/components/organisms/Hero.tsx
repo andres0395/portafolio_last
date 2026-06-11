@@ -17,12 +17,13 @@ export default function Hero() {
               </span>
             </Typography>
             <Typography variant="h4" className="text-gray-600 mb-8" component="h2">
-              Técnico en Desarrollo y Mantenimiento de Software
+              Desarrollador de Software · Full Stack
             </Typography>
             <Typography variant="body" className="text-lg text-gray-600 mb-8 max-w-2xl">
-              Desarrollador Web Full Stack con sólida experiencia en Next.js y Nest.js implementando patrones de
-              diseño atómico. Apasionado por la creación de soluciones innovadoras y sistemas de gestión
-              empresarial, con dominio de Angular, React y Node.js.
+              Construyo productos web completos con Next.js, Nest.js y PostgreSQL, cuidando tanto la
+              arquitectura del backend como la experiencia del frontend. Me gusta trabajar con patrones
+              como el diseño atómico, principios SOLID y despliegues automatizados que mantienen los
+              sistemas estables incluso en infraestructura con recursos limitados.
             </Typography>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Link href="#projects">

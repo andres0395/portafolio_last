@@ -42,7 +42,7 @@ export const projects = [
   {
     "title": "Compre360 – Soluciones Digitales y E-commerce",
     "description": "Plataforma de soluciones digitales con e-commerce premium, showroom digital, marca personal, autenticación, panel administrativo con RBAC, suscripciones, facturación electrónica DIAN y chat en tiempo real.",
-    "image": "/imgs/compre360.png",
+    "image": "/img/compre360.png",
     "technologies": [
       "Next.js 16",
       "TypeScript",

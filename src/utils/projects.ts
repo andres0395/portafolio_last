@@ -1,39 +1,67 @@
 export const projects = [
   {
-    title: "E-Commerce Startup Estados Unidos",
-    description: "Plataforma de comercio electrónico completa con panel de administración, gestión de inventario, procesamiento de pagos y análisis en tiempo real.",
-    image: "/img/ecommerce.png",
-    technologies: [
+    "title": "E-Commerce Startup Estados Unidos",
+    "description": "Plataforma de comercio electrónico completa desarrollada con Next.js (App Router) que incluye panel de administración, gestión de inventario, procesamiento de pagos con Square, autenticación con JWT y control de roles, además de servicios de correo y utilidades operativas (p. ej. tracking).",
+    "image": "/img/ecommerce.png",
+    "technologies": [
       "Next.js",
+      "React",
       "TypeScript",
       "PostgreSQL",
-      "Tailwind",
-      "NestJS",
+      "Prisma",
+      "Tailwind CSS",
+      "Square Payments",
       "Autenticación JWT",
-      "Roles",
+      "Roles y permisos",
+      "Zustand",
+      "Zod",
+      "Cloudflare Turnstile",
+      "Sentry"
     ],
-    features: [
-      "Carrito de compras en tiempo real",
-      "Panel de administración completo",
-      "Integración con pasarelas de pago Square",
-      "Sistema de inventario automatizado"
+    "features": [
+      "Carrito de compras y flujo de checkout",
+      "Panel de administración (productos, categorías, usuarios, ofertas/descuentos, impuestos, etc.)",
+      "Integración de pagos con Square",
+      "Gestión de inventario y catálogo de productos",
+      "Autenticación y autorización (JWT + roles)",
+      "Notificaciones/correos transaccionales (reset password, confirmaciones, etc.)",
+      "Carga de imágenes/archivos",
+      "Tracking e integraciones operativas (UPS)"
     ],
-    github: "#",
-    demo: "https://test-ecom.internationalfood360.com/",
-    status: "En Desarrollo"
+    "github": "#",
+    "demo": "https://test-ecom.internationalfood360.com/",
+    "status": "En Desarrollo"
   },
   {
-    title: "Landing Page de Transporte de Lujo",
-    description: "Landing page para una empresa de transporte de lujo con sistema de reservas y gestión de flotas.",
+    title: "GJ TWO THOUSAND | Executive Car & Limousine Service",
+    description:
+      "Sitio web de transporte ejecutivo y de lujo (NYC, NJ y CT) con reservas, cálculo de tarifas, dashboard autenticado y gestión de usuarios/facturas con generación de PDF y envío por correo.",
     image: "/img/transport.png",
-    technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind"],
+    technologies: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Prisma 7",
+      "PostgreSQL",
+      "Tailwind CSS 4",
+      "Zod",
+      "Nodemailer (Zoho Mail)",
+      "jsPDF + jsPDF-AutoTable",
+      "Cloudflare Turnstile",
+      "Zustand",
+      "SWR",
+      "Jest + Testing Library"
+    ],
     features: [
-      "Sistema de reservas",
-      "Gestión de flotas",
-      "Notificaciones por correo electrónico",
-      "Generación de cotizaciones",
-      "Generacion de Facturas PDF y envio por correo",
-      "Dashboard analítico"
+      "Sistema de reservas (formulario /reservation) con notificación por correo (reservation@gjtwothousand.com)",
+      "Páginas de servicios: Airport, Hourly Chauffeur, Corporate Travel, Point-to-Point, Private Jet & FBO",
+      "Módulo de tarifas (Rates) con calculadora y tarifas Out-of-Town/Manhattan basadas en data JSON",
+      "Autenticación (login) y recuperación de contraseña con OTP",
+      "Dashboard autenticado (secciones de usuarios, facturas e incrementos)",
+      "Gestión de usuarios con roles (admin, banker, customer) y datos de asistente",
+      "Generación de facturas PDF y envío por correo",
+      "Formulario de contacto con notificación por correo",
+      "SEO técnico: sitemap, robots, OpenGraph y datos estructurados (StructuredData)"
     ],
     github: "#",
     demo: "https://gjtwothousand.com/",

@@ -3,12 +3,37 @@ export const experiences = [
     title: "Desarrollador Full Stack Freelance",
     company: "Independiente",
     period: "Octubre 2025 - Actualidad",
-    description: "Desarrollo de soluciones web completas para clientes internacionales, incluyendo una plataforma de e-commerce y sistemas de gestión para transporte. Especialización en arquitecturas escalables con tecnologías modernas.",
-    technologies: ["Next.js", "NestJS", "TypeScript", "PostgreSQL", "TypeORM", "Tailwind", "Square API"],
+    description:
+      "Desarrollo productos web end-to-end para clientes internacionales, desde el diseño de la arquitectura y el modelado de datos hasta el despliegue y la operación en producción. En este periodo he construido y evolucionado tres plataformas principales: un e-commerce para una startup en EE.UU., un sistema de reservas y gestión para transporte ejecutivo, y una plataforma de soluciones digitales con e-commerce premium (Compre360). Me enfoco en mantener el código y la infraestructura simples, escalables y estables, priorizando seguridad, rendimiento y una buena experiencia de usuario.",
+    technologies: [
+      "Next.js (App Router)",
+      "React",
+      "TypeScript",
+      "NestJS",
+      "PostgreSQL",
+      "Prisma",
+      "Tailwind CSS",
+      "Zod",
+      "Zustand",
+      "SWR",
+      "JWT + RBAC",
+      "Square Payments (webhooks)",
+      "Cloudflare Turnstile",
+      "Nodemailer/SMTP",
+      "PDF (jsPDF / @react-pdf/renderer)",
+      "GitHub Actions (CI/CD)",
+      "Deploy por SSH",
+      "Workers/Cron",
+      "Backups automáticos (DB)",
+      "Sentry"
+    ],
     achievements: [
-      "Desarrollé plataforma de E-Commerce para startup en EE.UU. con pagos y gestión de inventario",
-      "Creé sistema de reservas y gestión de flotas para empresa de transporte de lujo",
-      "Implementé paneles de administración y facturación automatizada"
+      "Entregué un e-commerce para startup en EE.UU. con panel administrativo, catálogo e inventario, checkout y pagos con Square, además de autenticación JWT y control de roles.",
+      "Construí un sitio/plataforma para transporte ejecutivo (NYC, NJ y CT) con reservas, cálculo de tarifas, dashboard autenticado, generación de facturas PDF y envío automático por correo.",
+      "Desarrollé Compre360: e-commerce premium + showroom digital + panel administrativo con RBAC, suscripciones, chat en tiempo real, internacionalización (ES/EN) y un enfoque fuerte en SEO técnico (sitemap, robots, JSON-LD y OpenGraph).",
+      "Implementé una estrategia de despliegue robusta sobre servidores de Hostinger: CI/CD con GitHub Actions, validaciones y ejecución de pruebas, despliegue por SSH, y flujos de rollback cuando es necesario.",
+      "Configuré copias de seguridad automáticas de bases de datos y tareas programadas (workers/cron) para procesos recurrentes como renovaciones, notificaciones y mantenimiento operativo.",
+      "Aterricé prácticas de observabilidad y calidad: logging, alertas y seguimiento de errores (Sentry), cuidando la estabilidad en producción incluso sin depender de infraestructura cloud premium como AWS."
     ]
   },
   {
